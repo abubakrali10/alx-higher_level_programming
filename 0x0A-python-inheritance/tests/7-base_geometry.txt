@@ -1,0 +1,35 @@
+``7-base_geometry`` module test
+====================
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> baseg = BaseGeometry()
+
+>>> baseg.integer_validator("bakr", 5)
+>>> baseg.integer_validator("bakr", 100)
+>>> baseg.integer_validator("bakr", 2000)
+
+>>> baseg.integer_validator("Abubakr", "Ali")
+Traceback (most recent call last):
+  ...
+TypeError: Abubakr must be an integer
+
+>>> baseg.integer_validator(None)
+Traceback (most recent call last):
+  ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> baseg.integer_validator("bakr", -5)
+Traceback (most recent call last):
+  ...
+ValueError: bakr must be greater than 0
+
+>>> baseg.integer_validator("bakr", 0)
+Traceback (most recent call last):
+  ...
+ValueError: bakr must be greater than 0
+
+>>> baseg.integer_validator("bakr", 5.5)
+Traceback (most recent call last):
+  ...
+TypeError: bakr must be an integer
