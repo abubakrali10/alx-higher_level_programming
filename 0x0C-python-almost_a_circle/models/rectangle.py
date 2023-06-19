@@ -235,5 +235,8 @@ class Rectangle(Base):
         Returns:
             str: A string representing the rectangle.
         """
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y}" +
-        "- {self.width}/{self.height}"
+        rect = "[Rectangle] "
+        rect_id = f"({self.id}) "
+        rect_x_y = f"{self.x}/{self.y} "
+        rect_w_h = f"- {self.width}/{self.height}"
+        return rect + rect_id + rect_x_y + rect_w_h
