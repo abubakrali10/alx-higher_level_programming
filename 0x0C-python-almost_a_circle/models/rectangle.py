@@ -3,6 +3,7 @@
 ''Rectangle'' module
 Creating a Rectangle class that inherits Base
 """
+import json
 from models.base import Base
 
 
