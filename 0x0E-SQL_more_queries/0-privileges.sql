@@ -1,4 +1,4 @@
--- This script lists all privileges of the MySQL users
--- list privileges of user_0d_1 and user_0d_2 on MySQL
+-- This script lists all privileges
+-- list privileges of users
 SHOW GRANTS FOR 'user_0d_1'@'localhost';
 SHOW GRANTS FOR 'user_0d_2'@'localhost';
