@@ -10,7 +10,7 @@ if __name__ == "__main__":
     query = ("SELECT * FROM states" +
              "WHERE states.name LIKE BINARY %s ORDER BY states.id")
     arg = sys.argv[4]
-    cur.execute(query, (arg + '%',))
+    cur.execute(query, (arg,))
     res = cur.fetchall()
     for state in res:
         print(state)
