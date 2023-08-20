@@ -9,8 +9,7 @@ if __name__ == "__main__":
     cur = mydb.cursor()
     query = ("SELECT * FROM states" +
              "WHERE states.name LIKE BINARY %s ORDER BY states.id")
-    arg = sys.argv[4]
-    cur.execute(query, (arg,))
+    cur.execute(query, (sys.argv[4],))
     res = cur.fetchall()
     for state in res:
         print(state)
