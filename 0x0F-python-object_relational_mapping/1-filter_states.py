@@ -8,7 +8,7 @@ if __name__ == "__main__":
                            passwd=sys.argv[2], db=sys.argv[3])
     cur = mydb.cursor()
     cur.execute("SELECT * FROM states
-                WHERE states.name like 'N%' ORDER BY states.id")
+                WHERE states.name like BINARY 'N%' ORDER BY states.id")
     res = cur.fetchall()
     for state in res:
         print(state)
